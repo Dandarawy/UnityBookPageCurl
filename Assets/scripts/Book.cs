@@ -253,6 +253,7 @@ public class Book : MonoBehaviour {
 
         LeftNext.transform.SetAsFirstSibling();
         if (enableShadowEffect) Shadow.gameObject.SetActive(true);
+        UpdateBookRTLToPoint(f);
     }
     public void OnMouseDragRightPage()
     {
@@ -286,6 +287,7 @@ public class Book : MonoBehaviour {
 
         RightNext.transform.SetAsFirstSibling();
         if (enableShadowEffect) ShadowLTR.gameObject.SetActive(true);
+        UpdateBookLTRToPoint(f);
     }
     public void OnMouseDragLeftPage()
     {
