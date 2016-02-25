@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 4446b7192d8bf914ebaf797b64fe8b86
+timeCreated: 1454769561
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - BookPanel: {instanceID: 0}
+  - background: {instanceID: 0}
+  - ClippingPlane: {instanceID: 0}
+  - NextPageClip: {instanceID: 0}
+  - Shadow: {instanceID: 0}
+  - ShadowLTR: {instanceID: 0}
+  - Left: {instanceID: 0}
+  - LeftNext: {instanceID: 0}
+  - Right: {instanceID: 0}
+  - RightNext: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
