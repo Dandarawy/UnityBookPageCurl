@@ -8,7 +8,8 @@ A simple unity3D package to create a "book page flip" effect using unity native 
 - Works with Canvas Scaler.
 
 #Documentation
-Coming Soon! please keep checking the Wiki section
+Check [Wiki](https://github.com/Dandarawy/Unity3DBookPageCurl/wiki) Section
+
 
 #Asset store
-Download the last updated unity package from unity asset store:
+Download the latest unity package from unity [Asset Store](https://www.assetstore.unity3d.com/#!/content/55588)
