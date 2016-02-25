@@ -2,6 +2,7 @@ Library/*
 Temp/*
 obj/*
 Build/*
+Assets/AssetStoreTools/*
 *.csproj
 *.sln
 *.suo
