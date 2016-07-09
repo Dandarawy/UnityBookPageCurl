@@ -84,7 +84,7 @@ public class Book : MonoBehaviour {
         float scaledPageWidth = pageWidth / scaleFactor;
         float scaledPageHeight = pageHeight / scaleFactor;
         radius2 = Mathf.Sqrt(scaledPageWidth * scaledPageWidth + scaledPageHeight * scaledPageHeight);
-        ClippingPlane.rectTransform.sizeDelta = new Vector2(scaledPageWidth, scaledPageHeight + scaledPageWidth * 0.6f);
+        ClippingPlane.rectTransform.sizeDelta = new Vector2(scaledPageWidth*2, scaledPageHeight + scaledPageWidth * 2);
         Shadow.rectTransform.sizeDelta = new Vector2(scaledPageWidth, scaledPageHeight + scaledPageWidth * 0.6f);
         ShadowLTR.rectTransform.sizeDelta = new Vector2(scaledPageWidth, scaledPageHeight + scaledPageWidth * 0.6f);
         NextPageClip.rectTransform.sizeDelta = new Vector2(scaledPageWidth, scaledPageHeight + scaledPageWidth * 0.6f);
@@ -121,6 +121,7 @@ public class Book : MonoBehaviour {
         ShadowLTR.transform.localEulerAngles = new Vector3(0, 0, 0);
         Left.transform.SetParent(ClippingPlane.transform, true);
 
+        Right.transform.SetParent(BookPanel.transform, true);
         LeftNext.transform.SetParent(BookPanel.transform, true);
 
         c = Calc_C_Position(followLocation);
@@ -141,6 +142,8 @@ public class Book : MonoBehaviour {
         NextPageClip.transform.eulerAngles = new Vector3(0, 0, T0_T1_Angle - 90);
         NextPageClip.transform.position = BookPanel.TransformPoint(t1);
         LeftNext.transform.SetParent(NextPageClip.transform, true);
+        Right.transform.SetParent(ClippingPlane.transform, true);
+        Right.transform.SetAsFirstSibling();
 
         ShadowLTR.rectTransform.SetParent(Left.rectTransform, true);
     }
@@ -153,6 +156,7 @@ public class Book : MonoBehaviour {
         Shadow.transform.localEulerAngles = new Vector3(0, 0, 0);
         Right.transform.SetParent(ClippingPlane.transform, true);
         
+        Left.transform.SetParent(BookPanel.transform, true);
         RightNext.transform.SetParent(BookPanel.transform, true);
         c = Calc_C_Position(followLocation);
         Vector3 t1;
@@ -173,6 +177,8 @@ public class Book : MonoBehaviour {
         NextPageClip.transform.eulerAngles = new Vector3(0, 0, T0_T1_Angle + 90);
         NextPageClip.transform.position = BookPanel.TransformPoint(t1);
         RightNext.transform.SetParent(NextPageClip.transform, true);
+        Left.transform.SetParent(ClippingPlane.transform, true);
+        Left.transform.SetAsFirstSibling();
 
         Shadow.rectTransform.SetParent(Right.rectTransform, true);
     }
@@ -235,7 +241,7 @@ public class Book : MonoBehaviour {
 
 
         NextPageClip.rectTransform.pivot = new Vector2(0, 0.12f);
-        ClippingPlane.rectTransform.pivot = new Vector2(1, 0.12f);
+        ClippingPlane.rectTransform.pivot = new Vector2(1, 0.25f);
 
         Left.gameObject.SetActive(true);
         Left.rectTransform.pivot = new Vector2(0, 0);
@@ -269,7 +275,7 @@ public class Book : MonoBehaviour {
         f = point;
 
         NextPageClip.rectTransform.pivot = new Vector2(1, 0.12f);
-        ClippingPlane.rectTransform.pivot = new Vector2(0, 0.12f);
+        ClippingPlane.rectTransform.pivot = new Vector2(0, 0.25f);
 
         Right.gameObject.SetActive(true);
         Right.transform.position = LeftNext.transform.position;
