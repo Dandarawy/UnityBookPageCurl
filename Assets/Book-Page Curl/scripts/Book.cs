@@ -163,7 +163,7 @@ public class Book : MonoBehaviour {
         float T0_T1_Angle = Calc_T0_T1_Angle(c,ebr,out t1);
         if (T0_T1_Angle >= -90) T0_T1_Angle -= 180;
 
-        ClippingPlane.rectTransform.pivot = new Vector2(1, 0.15f);
+        ClippingPlane.rectTransform.pivot = new Vector2(1, 0.35f);
         ClippingPlane.transform.eulerAngles = new Vector3(0, 0, T0_T1_Angle + 90);
         ClippingPlane.transform.position = BookPanel.TransformPoint(t1);
 
@@ -241,7 +241,7 @@ public class Book : MonoBehaviour {
 
 
         NextPageClip.rectTransform.pivot = new Vector2(0, 0.12f);
-        ClippingPlane.rectTransform.pivot = new Vector2(1, 0.25f);
+        ClippingPlane.rectTransform.pivot = new Vector2(1, 0.35f);
 
         Left.gameObject.SetActive(true);
         Left.rectTransform.pivot = new Vector2(0, 0);
@@ -275,7 +275,7 @@ public class Book : MonoBehaviour {
         f = point;
 
         NextPageClip.rectTransform.pivot = new Vector2(1, 0.12f);
-        ClippingPlane.rectTransform.pivot = new Vector2(0, 0.25f);
+        ClippingPlane.rectTransform.pivot = new Vector2(0, 0.35f);
 
         Right.gameObject.SetActive(true);
         Right.transform.position = LeftNext.transform.position;
