@@ -14,3 +14,7 @@ Check [Wiki](https://github.com/Dandarawy/Unity3DBookPageCurl/wiki) Section
 
 # Asset store
 Download the latest unity package from unity [Asset Store](http://u3d.as/odF)
+<p align="center">
+  <img src="https://github.com/Dandarawy/UnityBookPageCurl/blob/master/docs/bookFlippingpreview.gif">
+</p>
+
